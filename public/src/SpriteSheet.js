@@ -3,7 +3,11 @@ export default class SpriteSheet {
     this.sprites = new Map()
   }
 
-  addSprite(spriteName, width, height, img) {
+  get(name) {
+    return this.sprites.get(name)
+  }
+
+  addSprite(name, width, height, img) {
     const canvas = document.createElement('canvas')
     canvas.width = width
     canvas.height = height
@@ -17,11 +21,11 @@ export default class SpriteSheet {
      height
     )
 
-    this.sprites.set(spriteName, canvas)
+    this.sprites.set(name, canvas)
   }
 
   draw(context, x, y, spriteName) {
-    const sprite = this.sprites.get(spriteName)
+    const sprite = this.get(spriteName)
     context.drawImage(sprite, x, y)
   }
 }

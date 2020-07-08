@@ -1,4 +1,16 @@
 {
   "name": "1",
-  "background": "bricks"
+  "width": 800,
+  "height": 400,
+  "tileSize": 20,
+  "sprites": [
+    {
+      "name": "background",
+      "src": "/assets/backgrounds/bricks.png"
+    },
+    {
+      "name": "wall",
+      "src": "/assets/walls/green.png"
+    }
+  ]
 }
